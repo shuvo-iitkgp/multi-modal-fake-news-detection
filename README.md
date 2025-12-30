@@ -33,7 +33,7 @@ Cost-aware triage for selective human verification
 This repo supports end-to-end training, evaluation, inference, and ablations.
 
 ### Repository Structure
-.
+```
 ├── configs/                # YAML experiment configs
 ├── data/                   # ignored by git (datasets, images, indices)
 ├── scripts/                # dataset preparation & utilities
@@ -48,7 +48,7 @@ This repo supports end-to-end training, evaluation, inference, and ablations.
 ├── .gitignore
 ├── pyproject.toml
 └── README.md
-
+```
 ### Citation
 
 If you use this codebase, cite the corresponding paper:
