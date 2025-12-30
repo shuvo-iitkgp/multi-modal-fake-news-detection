@@ -1,0 +1,35 @@
+seed: 42
+
+data:
+  train_csv: data/processed/train.csv
+  val_csv: data/processed/val.csv
+  image_root: data/images
+  image_size: 224
+
+model:
+  text_model: distilbert-base-uncased
+  max_len: 256
+  use_image: true
+  fused_dim: 512
+  num_classes: 2
+
+  use_event_adversary: true
+  grl_lambda: 0.5
+  adv_weight: 0.2
+
+train:
+  epochs: 3
+  batch_size: 8
+  num_workers: 2
+  lr: 2.0e-5
+  weight_decay: 0.01
+
+scoring:
+  alpha_pts: 0.5
+  w_model_cmc: 0.7
+  beta_cmpu: 0.5
+
+evidence:
+  jsonl: data/cache/evidence_val.jsonl
+  use_verifier_in_scoring: true
+  verifier_weight: 0.3

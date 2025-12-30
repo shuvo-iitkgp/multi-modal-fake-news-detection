@@ -1,0 +1,25 @@
+seed: 42
+
+data:
+  train_csv: data/processed/train_small.csv
+  val_csv: data/processed/val_small.csv
+  image_root: data/images
+  image_size: 224
+
+model:
+  text_model: distilbert-base-uncased
+  max_len: 128
+  use_image: true # start text-only for sanity
+  fused_dim: 256
+  num_classes: 2
+  use_event_adversary: false
+
+train:
+  epochs: 1
+  batch_size: 4
+  num_workers: 0
+  lr: 5.0e-5
+  weight_decay: 0.0
+
+scoring:
+  beta_cmpu: 0.5

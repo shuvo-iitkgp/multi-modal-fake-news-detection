@@ -1,0 +1,6 @@
+[console_scripts]
+mmfnd-build-indices = mmfnd.cli.build_indices:main
+mmfnd-eval = mmfnd.cli.evaluate:main
+mmfnd-fill-evidence = mmfnd.cli.fill_evidence:main
+mmfnd-predict = mmfnd.cli.predict:main
+mmfnd-train = mmfnd.cli.train:main
