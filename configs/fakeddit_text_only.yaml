@@ -1,0 +1,24 @@
+seed: 42
+
+data:
+  train_csv: data/fakeddit_train.csv
+  val_csv: data/fakeddit_val.csv
+  image_root: null
+  image_size: 224
+
+train:
+  batch_size: 8
+  num_workers: 2
+  lr: 2e-5
+  weight_decay: 0.01
+  epochs: 3
+
+model:
+  text_model: distilbert-base-uncased
+  max_len: 256
+  use_image: false
+  fused_dim: 512
+  num_classes: 2
+  use_event_adversary: false
+  grl_lambda: 0.5
+  adv_weight: 0.2

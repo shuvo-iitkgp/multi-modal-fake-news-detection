@@ -16,6 +16,7 @@ __pycache__/
 venv/
 ENV/
 env/
+data/
 
 ########################################
 # OS / Editor

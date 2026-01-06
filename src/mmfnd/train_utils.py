@@ -40,7 +40,8 @@ def evaluate(model, loader, device) -> Dict[str, Any]:
         yhat = (p >= 0.5).astype(int)
         ys.append(y); preds.append(yhat); probs.append(p)
     dt = time.time() - t0
-    ys = np.concatenate(ys); preds = np.concatenate(preds); probs = np.concatenate(probs)
+    ys = np.concatenate(ys); preds = np.concatenate(preds); 
+    probs = np.concatenate(probs)
     return {"y": ys, "yhat": preds, "p_real": probs, "seconds": dt}
 
 def train_one_epoch(
